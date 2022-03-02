@@ -23,7 +23,7 @@ class StyleSetter:
         else:
             setButtonStyle(main_window)
 
-        # check exclusion of other types
+        # todo check exclusion of other types
         if len(exclude_type_lst) > 0:
             for _type in exclude_type_lst:
                 widgets = main_window.findChildren(_type)
