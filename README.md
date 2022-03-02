@@ -9,3 +9,6 @@ Currently the only style which can be set is dark-gray(<a href="https://github.c
 
 ## Setup
 ```pip3 install git+https://github.com/yjg30737/pyqt-style-setter.git --upgrade```
+
+## Included Packages
+* <a href="https://github.com/yjg30737/pyqt-dark-gray-theme.git">pyqt-dark-gray-theme</a>
