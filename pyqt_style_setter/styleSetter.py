@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QWidget, QAbstractButton
-from pyqt_dark_gray_theme import *
+from pyqt_dark_gray_theme.darkGrayTheme import *
 
 
 class StyleSetter:
