@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QWidget, QAbstractButton
+from PyQt5.QtWidgets import QWidget, QAbstractButton, QMainWindow
 from pyqt_dark_gray_theme.darkGrayTheme import *
 from pyqt_svg_icon_pushbutton import SvgIconPushButton
 
@@ -39,7 +39,8 @@ class StyleSetter:
                 if isinstance(_type, QAbstractButton):
                     print(_type)
 
-        menu_bar = main_window.menuBar()  # menu bar
-        menu_bar_style = getMenuBarStyle(menu_bar)
-        menu_bar.setStyleSheet(menu_bar_style)
+        if isinstance(main_window, QMainWindow):
+            menu_bar = main_window.menuBar()  # menu bar
+            menu_bar_style = getMenuBarStyle(menu_bar)
+            menu_bar.setStyleSheet(menu_bar_style)
 
