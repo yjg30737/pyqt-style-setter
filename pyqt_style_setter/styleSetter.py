@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QWidget, QAbstractButton, QMainWindow
+from PyQt5.QtWidgets import QWidget, QAbstractButton, QMainWindow, QDialog
 from pyqt_dark_gray_theme.darkGrayTheme import *
 from pyqt_svg_icon_pushbutton import SvgIconPushButton
 
@@ -6,7 +6,13 @@ from pyqt_svg_icon_pushbutton import SvgIconPushButton
 class StyleSetter:
     @staticmethod
     def setWindowStyle(main_window: QWidget, exclude_type_lst: list = []):
-        main_window.setStyleSheet(getThemeStyle())  # theme
+        if isinstance(main_window, QMainWindow):
+            main_window.setStyleSheet(getThemeStyle())  # theme
+        elif isinstance(main_window, QDialog):
+            main_window.setStyleSheet(getThemeStyle())  # theme
+        else:
+            main_window.setObjectName('widget')
+            main_window.setStyleSheet(getMainWidgetStyle() + getThemeStyle())
 
         # button
         def setButtonStyle(main_window):
