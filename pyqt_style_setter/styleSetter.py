@@ -7,13 +7,12 @@ class StyleSetter:
     @staticmethod
     def setWindowStyle(main_window: QWidget, theme: str = 'dark', exclude_type_lst: list = []):
         if theme == 'dark':
-            if isinstance(main_window, QMainWindow):
-                main_window.setStyleSheet(getThemeStyle())  # theme
-            elif isinstance(main_window, QDialog):
-                main_window.setStyleSheet(getThemeStyle())  # theme
+            theme_style = getThemeStyle()
+            if isinstance(main_window, QMainWindow) or isinstance(main_window, QDialog):
+                main_window.setStyleSheet(theme_style)
             else:
                 main_window.setObjectName('widget')
-                main_window.setStyleSheet(getMainWidgetStyle() + getThemeStyle())
+                main_window.setStyleSheet(theme_style + getThemeStyle())
 
             # button
             def setButtonStyle(main_window):
