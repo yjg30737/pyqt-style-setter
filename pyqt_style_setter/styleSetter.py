@@ -12,7 +12,7 @@ class StyleSetter:
                 main_window.setStyleSheet(theme_style)
             else:
                 main_window.setObjectName('widget')
-                main_window.setStyleSheet(theme_style + getThemeStyle())
+                main_window.setStyleSheet(theme_style + getMainWidgetStyle())
 
             # button
             def setButtonStyle(main_window):
