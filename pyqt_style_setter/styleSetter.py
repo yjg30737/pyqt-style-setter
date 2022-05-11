@@ -11,7 +11,7 @@ class StyleSetter:
             if isinstance(main_window, QMainWindow) or isinstance(main_window, QDialog):
                 main_window.setStyleSheet(theme_style)
             else:
-                main_window.setObjectName('widget')
+                main_window.setObjectName('mainWidget')
                 main_window.setStyleSheet(theme_style + getMainWidgetStyle())
 
             # button
