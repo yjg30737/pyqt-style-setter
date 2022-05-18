@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QWidget, QAbstractButton, QMainWindow, QDialog
 from pyqt_dark_gray_theme.darkGrayTheme import *
-from pyqt_svg_icon_pushbutton import SvgIconPushButton
+from pyqt_svg_button import SvgButton
 
 
 class StyleSetter:
@@ -20,14 +20,14 @@ class StyleSetter:
                 for btn in btns:
                     # check if text exists
                     if btn.text().strip() == '':
-                        # if button type is SvgIconPushButton, let it maintain its own style
-                        if isinstance(btn, SvgIconPushButton):
+                        # if button type is SvgButton, let it maintain its own style
+                        if isinstance(btn, SvgButton):
                             pass
                         else:
                             btn.setStyleSheet(getIconButtonStyle())  # no text - icon button style
                     else:
-                        # if button type is SvgIconPushButton, let it maintain its own style
-                        if isinstance(btn, SvgIconPushButton):
+                        # if button type is SvgButton, let it maintain its own style
+                        if isinstance(btn, SvgButton):
                             pass
                         else:
                             btn.setStyleSheet(getIconTextButtonStyle())  # text - icon-text button style
