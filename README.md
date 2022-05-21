@@ -20,7 +20,7 @@ Currently the only style you can set is dark-gray(<a href="https://github.com/yj
 ## Example
 ※ I use the <a href="https://github.com/yjg30737/pyqt-timer.git">pyqt-timer</a>'s settings dialog as an example. 
 
-PyQt default theme
+### PyQt default theme
 
 ```python
 from PyQt5.QtWidgets import QApplication
@@ -37,7 +37,7 @@ if __name__ == "__main__":
 
 ![image](https://user-images.githubusercontent.com/55078043/167977357-9398f798-0088-47c5-af80-159c6fb1831b.png)
 
-Dark-gray theme
+### Dark-gray theme
 
 ```python
 from PyQt5.QtWidgets import QApplication
@@ -55,3 +55,28 @@ if __name__ == "__main__":
 ```
 
 ![image](https://user-images.githubusercontent.com/55078043/167977474-81411648-de15-45e9-91cd-8f83ea3e863d.png)
+
+### Using this with <a href="https://github.com/yjg30737/pyqt-custom-titlebar-setter.git">pyqt-custom-titlebar-setter</a>
+
+```python
+from PyQt5.QtWidgets import QApplication
+from pyqt_custom_titlebar_setter import CustomTitlebarSetter
+from pyqt_style_setter import StyleSetter
+from pyqt_timer.settingsDialog import SettingsDialog
+
+if __name__ == "__main__":
+    import sys
+
+    app = QApplication(sys.argv)
+    dialog = SettingsDialog()
+    StyleSetter.setWindowStyle(dialog)
+    titleBarWindow = CustomTitlebarSetter.getCustomTitleBarWindow(dialog, icon_filename='settings.svg')
+    titleBarWindow.show()
+    app.exec_()
+```
+
+![image](https://user-images.githubusercontent.com/55078043/169630980-aee1c358-59f3-4761-8c80-d2f04df4baef.png)
+
+For those who use macOS
+
+![image](https://user-images.githubusercontent.com/55078043/169631123-bc38a3f3-4fb8-4552-99ee-0d6af529c157.png)
