@@ -2,7 +2,7 @@
 PyQt style setter
 
 ## Note
-Currently the only style you can set is dark-gray(<a href="https://github.com/yjg30737/pyqt-dark-gray-theme.git">pyqt-dark-gray-theme</a>).
+Currently the only style you can set is dark-gray(<a href="https://github.com/yjg30737/pyqt-dark-gray-theme.git">pyqt-dark-gray-theme</a>), light-gray(<a href="https://github.com/yjg30737/pyqt-light-gray-theme.git">pyqt-light-gray-theme</a>).
 
 ## Requirements
 * PyQt5 >= 5.8
