@@ -12,6 +12,7 @@ Currently the only style you can set is dark-gray(<a href="https://github.com/yj
 
 ## Included Packages
 * <a href="https://github.com/yjg30737/pyqt-dark-gray-theme.git">pyqt-dark-gray-theme</a>
+* <a href="https://github.com/yjg30737/pyqt-light-gray-theme.git">pyqt-light-gray-theme</a>
 * <a href="https://github.com/yjg30737/pyqt-svg-button.git">pyqt-svg-button</a> - To exclude svg icon set button, also known as `SvgButton`. It should use its own style or else svg icon will be disappeared by overwritten style. 
 
 ## Usage
