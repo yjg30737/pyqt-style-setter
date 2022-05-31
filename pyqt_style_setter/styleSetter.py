@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QWidget, QAbstractButton, QMainWindow, QDialog
 from pyqt_dark_gray_theme import darkGrayTheme
-from pyqt_light_gray_theme import lightGrayTheme
+# from pyqt_light_gray_theme import lightGrayTheme
 from pyqt_svg_button import SvgButton
 
 
@@ -50,6 +50,8 @@ class StyleSetter:
                 menu_bar = main_window.menuBar()  # menu bar
                 menu_bar_style = darkGrayTheme.getMenuBarStyle(menu_bar)
                 menu_bar.setStyleSheet(menu_bar_style)
+        # i will be working on this
+        light_code = '''
         elif theme == 'light':
             theme_style = lightGrayTheme.getThemeStyle()
             if isinstance(main_window, QMainWindow) or isinstance(main_window, QDialog):
@@ -93,4 +95,5 @@ class StyleSetter:
                 menu_bar = main_window.menuBar()  # menu bar
                 menu_bar_style = lightGrayTheme.getMenuBarStyle(menu_bar)
                 menu_bar.setStyleSheet(menu_bar_style)
+        '''
 
