@@ -81,3 +81,6 @@ if __name__ == "__main__":
 For those who use macOS
 
 ![image](https://user-images.githubusercontent.com/55078043/169631123-bc38a3f3-4fb8-4552-99ee-0d6af529c157.png)
+
+## See Also
+* <a href="https://github.com/yjg30737/qtsasstheme.git">qtsasstheme</a> - using sass to set qt theme, bit more harder but far more flexible
